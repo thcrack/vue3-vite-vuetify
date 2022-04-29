@@ -2,13 +2,14 @@
   <v-container>
     <v-row class="">  <!-- class="text-center" -->
       <v-col class="pa-10" cols="5">
-        <v-img
+        <!-- <v-img
           class="bg-white"
           width="300"
           :aspect-ratio="1"
-          src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+          src="src/assets/avatar.png"
           cover
-        ></v-img>
+        ></v-img> -->
+        <div class="myavatar"></div>
 
       </v-col>
 
@@ -33,6 +34,11 @@
   </v-container>
 </template>
 
-<style>
-
+<style scoped>
+.myavatar{
+  width: 400px;
+  height: 400px;
+  background-image: url("@/assets/avatar.png");
+  background-size: contain;
+}
 </style>

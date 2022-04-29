@@ -1,4 +1,7 @@
 <script setup>
+const props = defineProps({
+  isHovering: false
+})
 // defineProps({
 //   msg: {
 //     type: String,

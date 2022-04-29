@@ -18,15 +18,16 @@ import { ref } from 'vue'
         <p>A UX Designer based in New York, currently pursuing a master's degree in UX Design at Pratt Institute. Looking for a UX Design internship in the summer 2022.</p>
 
       </v-col>
-      <v-col class="pa-10" cols="1"></v-col>
-      <v-col class="pa-10" cols="5">
-        <v-img
-          class="bg-white"
-          width="300"
+      <v-col class="pa-10" cols="6">
+        <!-- <v-img
+          class=""
+          width="500"
           :aspect-ratio="1"
-          src="@/assets/Avatar-2.png"
+          src="src/assets/avatar-2.png"
           cover
-        ></v-img>
+        ></v-img> -->
+
+        <div class="myavatar"></div>
 
       </v-col>
 
@@ -75,5 +76,10 @@ import { ref } from 'vue'
 </template>
 
 <style scoped>
-
+.myavatar{
+  width: 500px;
+  height: 500px;
+  background-image: url("@/assets/avatar-2.png");
+  background-size: cover;
+}
 </style>
