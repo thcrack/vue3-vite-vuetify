@@ -19,7 +19,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  // base: "vue3-vite-vuetify"
+  base: "vue3-vite-vuetify"
   /* remove the need to specify .vue files https://vitejs.dev/config/#resolve-extensions
   resolve: {
     extensions: [
