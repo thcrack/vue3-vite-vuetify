@@ -7,7 +7,7 @@ import { ref } from 'vue'
 
 <template>
 <div class="bg-grey-lighten-4">
-  <v-container class="pa-10">
+  <v-container class="pa-16">
     <v-row align="center" justify="center">  
 
       <v-col class="pa-10" sm="12" md="6">
@@ -28,7 +28,9 @@ import { ref } from 'vue'
           cover
         ></v-img> -->
 
-        <div class="myavatar"></div>
+        <div class="myavatar-bg">
+          <div class="myavatar"></div>
+        </div>
 
       </v-col>
 
@@ -41,11 +43,12 @@ import { ref } from 'vue'
   <v-card
     class="mx-auto pa-2"
   >
-    <v-container class="pa-10"> 
-
-      <h2 class="pb-10 pt-10 text-h4 font-weight-medium text-grey-darken-3">Selected Projects</h2>
-
-      <v-row >
+    <v-container class="pa-16"> 
+      <div class="pa-10">
+        <h2 class="pb-1 text-h4 font-weight-medium text-grey-darken-3">Selected Projects</h2>
+        <hr class="shortLine">
+      </div>
+      <v-row class="pa-10">
         <v-col cols="12">
           <ProjectCard class="ma-2"/>
         </v-col>
@@ -63,10 +66,34 @@ import { ref } from 'vue'
 </template>
 
 <style scoped>
+.myavatar-bg{
+  width: 400px;
+  height: 400px;
+  background-image: url("@/assets/avatar-bg.png");
+  background-size: cover;
+}
+
 .myavatar{
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   background-image: url("@/assets/avatar-2.png");
   background-size: cover;
+  animation: selfie_move 4s infinite ease-in-out;
+  position: absolute;
+}
+
+@keyframes selfie_move{
+  0%, 100% {
+    bottom: 58%;
+  }
+  50% {
+    bottom: 60%;
+  }
+}
+
+.shortLine{
+  width: 80px;
+  border: 1px solid #444;
+  margin-left: 0px;
 }
 </style>

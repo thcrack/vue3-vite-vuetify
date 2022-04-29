@@ -2,13 +2,14 @@
 import { ref, watch, onMounted } from 'vue'
 import { RouterLink, RouterView, useRoute } from 'vue-router'
 
-const pathName = ref(location.pathname);
+const pathName = ref('/');
 const route = useRoute();
+// console.log(pathName.value)
 
 watch(
   () => route.path,
   async (to, from) => {
-    // console.log(to, from);
+    console.log(to, from);
     pathName.value = to
   }
 );

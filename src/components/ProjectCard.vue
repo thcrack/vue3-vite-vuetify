@@ -18,7 +18,7 @@ const props = defineProps({
     rounded="lg"
     class="pa-2"
     v-bind="props"
-    :elevation="isHovering ? 24 : 6"
+    :elevation="isHovering ? 12 : 2"
     href="#"
   >
     <v-container>

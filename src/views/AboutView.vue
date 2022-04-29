@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row align="center" justify="center">
-      <v-col class="pa-10" sm="12" md="5">
+      <v-col class="pa-10" sm="12" md="5" align="center">
         <!-- <v-img
           class="bg-white"
           width="300"
@@ -38,7 +38,7 @@
           <p>Feel free to reach out to me on <a href="https://www.linkedin.com/in/carolynyu-owo/" target="_blank" class="text-pink-lighten-3">LinkedIn</a> / <a href="mailto:cyux16@pratt.edu" class="text-pink-lighten-3">Email</a>.</p>
         </div>
         <div class="pt-10">
-          <v-btn class="bg-pink-lighten-3 text-white" href="https://carolyn-yu.com/assets/doc/Resume.pdf" target="_blank">View My Resume</v-btn>
+          <v-btn class="bg-pink-lighten-4 text-grey-darken-4" href="https://carolyn-yu.com/assets/doc/Resume.pdf" target="_blank">View My Resume</v-btn>
         </div>
 
       </v-col>
