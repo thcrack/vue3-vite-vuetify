@@ -22,7 +22,7 @@ watch(
     <v-app-bar-title><RouterLink to="/" class="text-grey-darken-3"><strong>Carolyn Yu</strong> </RouterLink></v-app-bar-title>
     <RouterLink to="/" :class=" '/' != pathName ? 'text-grey-darken-3' : 'text-pink-lighten-3'"><v-btn>Work</v-btn></RouterLink>
     <RouterLink to="/about" :class=" '/about' != pathName ? 'text-grey-darken-3' : 'text-pink-lighten-3'"><v-btn>About</v-btn></RouterLink>
-    <v-btn><a class="text-grey-darken-3" href="https://carolyn-yu.com/assets/doc/Resume.pdf" target="_blank">Resume</a></v-btn>
+    <v-btn><a class="text-grey-darken-3" href="@/assets/Resume.pdf" target="_blank">Resume</a></v-btn>
   </v-app-bar>
 
   <v-main>
