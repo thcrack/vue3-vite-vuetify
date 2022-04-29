@@ -1,0 +1,79 @@
+
+<script setup>
+import ProjectCard from "@/components/ProjectCard.vue";
+import { ref } from 'vue'
+
+</script>
+
+<template>
+<div class="bg-grey-lighten-4">
+  <v-container class="pa-10">
+    <v-row>  
+
+      <v-col class="pa-10" cols="6">
+        <h1 class="display-2 font-weight-bold mb-3">
+          👋🏻 Hi, I am Carolyn Yu.
+        </h1>
+
+        <p>A UX Designer based in New York, currently pursuing a master's degree in UX Design at Pratt Institute. Looking for a UX Design internship in the summer 2022.</p>
+
+      </v-col>
+      <v-col class="pa-10" cols="1"></v-col>
+      <v-col class="pa-10" cols="5">
+        <v-img
+          class="bg-white"
+          width="300"
+          :aspect-ratio="1"
+          src="@/assets/Avatar-2.png"
+          cover
+        ></v-img>
+
+      </v-col>
+
+    </v-row>
+  </v-container>
+</div>
+
+<div>
+
+  <v-card
+    class="mx-auto"
+  >
+    <v-container class="pa-10"> 
+
+      <h2 class="pb-10 pt-10">Selected Projects</h2>
+
+      <v-row >
+        <v-col cols="12">
+          <ProjectCard class="ma-2"/>
+        </v-col>
+
+        <v-col cols="12">
+          <ProjectCard class="ma-2"/>
+        </v-col>
+
+        <v-col cols="6">
+          <ProjectCard class="ma-2"/>
+        </v-col>
+
+        <v-col cols="6">
+          <ProjectCard class="ma-2"/>
+        </v-col>
+
+        <v-col cols="6">
+          <ProjectCard class="ma-2"/>
+        </v-col>
+
+
+
+      </v-row>
+    </v-container>
+  </v-card>
+</div>
+
+  
+</template>
+
+<style scoped>
+
+</style>
