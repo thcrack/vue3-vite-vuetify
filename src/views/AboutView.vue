@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row align="center" justify="center">
-      <v-col class="pa-10" sm="12" md="5" align="center">
+      <v-col class="pa-10" cols="12" md="5" align="center">
         <!-- <v-img
           class="bg-white"
           width="300"
@@ -13,7 +13,7 @@
 
       </v-col>
 
-      <v-col sm="12" md="7" class="pa-10">
+      <v-col cols="12" md="7" class="pa-10">
         <div class="text-grey-darken-3">
           <h1 class="display-2 font-weight-bold mb-3 text-h4">
           Hi, I am Carolyn Yu.
@@ -49,7 +49,7 @@
 
 <style scoped>
 .myavatar{
-  width: 350px;
+  width: 100%;
   height: 350px;
   background-image: url("@/assets/avatar.png");
   background-size: contain;
