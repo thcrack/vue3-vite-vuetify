@@ -1,34 +1,18 @@
 
 <script setup>
+import { projectPreviewData } from "@/components/projects/projectMeta";
 import ProjectCard from "@/components/ProjectCard.vue";
 import { ref } from 'vue'
 // const avatarPath = ref('@/assets/avatar-2.png')
 
-const data = ref([
-  {
-    projectIcon: 'https://carolyn-yu.com/images/reddotlogo.png',
-    projectTitle: 'EyeBus',
-    projectDescription: 'A Bus Reservation Service for People with Visual Impairments in Taipei.',
-    img: 'https://carolyn-yu.com/images/eyebusCover.png',
-    tags: ['UX','Mobile','Accessibility','Usability Testing','Sketch','Xcode'],
-    themeColor: '#F1EFED',
-  },
-  {
-    projectIcon: 'https://carolyn-yu.com/images/chi2020logo.png',
-    projectTitle: 'WalkingVibe',
-    projectDescription: 'Reducing Virtual Reality Sickness and Improving Realism while Walking in VR using Unobtrusive Head-mounted Vibrotactile Feedback.',
-    img: 'https://carolyn-yu.com/images/walkingvibeCover.png',
-    tags: ['UX','Virtual Reality (VR)','Prototyping','C#','Arduino'],
-    themeColor: '#E5ECF7',
-  }
-])
+const data = ref(projectPreviewData)
 
 </script>
 
 <template>
 <div class="bg-grey-lighten-4">
   <v-container class="pa-md-10 pa-sm-2" >
-    <v-row align="center" justify="center">  
+    <v-row align="center" justify="center">
       <v-col class="pa-10" cols="12" md="6">
         <h1 class="display-2 font-weight-bold mb-3 text-h3 text-grey-darken-3">
           👋🏻 Hi, I am Carolyn Yu.
@@ -55,7 +39,7 @@ const data = ref([
 </div>
 
 <div>
-  <v-container class="pa-md-10 pa-sm-2"> 
+  <v-container class="pa-md-10 pa-sm-2">
     <v-row>
       <v-col class="pa-10" cols="12">
         <h2 class="pb-1 text-h4 font-weight-medium text-grey-darken-3">Selected Projects</h2>
@@ -64,14 +48,16 @@ const data = ref([
     </v-row>
     <v-row class="pa-10">
       <v-col cols="12" v-for="(project, id) in data" :key="id">
-        <ProjectCard class="ma-2" 
-        :projectIcon="project.projectIcon"
-        :projectTitle="project.projectTitle"
-        :projectDescription="project.projectDescription"
-        :img="project.img"
-        :tags="project.tags"
-        :themeColor="project.themeColor"
-        />
+        <router-link :to="`/project/${project.id}`">
+          <ProjectCard class="ma-2"
+                       :projectIcon="project.projectIcon"
+                       :projectTitle="project.projectTitle"
+                       :projectDescription="project.projectDescription"
+                       :img="project.img"
+                       :tags="project.tags"
+                       :themeColor="project.themeColor"
+          />
+        </router-link>
       </v-col>
 
       <!-- <v-col cols="12">
@@ -82,7 +68,7 @@ const data = ref([
   </v-container>
 </div>
 
-  
+
 </template>
 
 <style scoped>
@@ -104,7 +90,7 @@ const data = ref([
 @media only screen and (max-width: 600px){
 
   .avatarDiv{
-    padding: 0px !important; 
+    padding: 0px !important;
   }
 
   .myavatar-bg{

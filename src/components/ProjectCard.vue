@@ -19,7 +19,6 @@ const props = defineProps({
     class="pa-md-8 pa-sm-2"
     v-bind="props"
     :elevation="isHovering ? 12 : 2"
-    href="#"
   >
     <v-container>
       <v-row>
@@ -54,10 +53,10 @@ const props = defineProps({
         </v-col>
       </v-row>
     </v-container>
-    
+
   </v-card>
   </v-hover>
-  
+
 
 </template>
 
