@@ -27,7 +27,7 @@ const data = ref([
 
 <template>
 <div class="bg-grey-lighten-4">
-  <v-container class="pa-10">
+  <v-container class="pa-md-10 pa-sm-2" >
     <v-row align="center" justify="center">  
       <v-col class="pa-10" cols="12" md="6">
         <h1 class="display-2 font-weight-bold mb-3 text-h3 text-grey-darken-3">
@@ -55,7 +55,7 @@ const data = ref([
 </div>
 
 <div>
-  <v-container class="pa-10"> 
+  <v-container class="pa-md-10 pa-sm-2"> 
     <v-row>
       <v-col class="pa-10" cols="12">
         <h2 class="pb-1 text-h4 font-weight-medium text-grey-darken-3">Selected Projects</h2>
@@ -63,7 +63,6 @@ const data = ref([
       </v-col>
     </v-row>
     <v-row class="pa-10">
-
       <v-col cols="12" v-for="(project, id) in data" :key="id">
         <ProjectCard class="ma-2" 
         :projectIcon="project.projectIcon"

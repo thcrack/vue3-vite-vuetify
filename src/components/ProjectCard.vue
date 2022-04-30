@@ -16,8 +16,7 @@ const props = defineProps({
     :color=" themeColor||'#E5ECF7'"
     theme="light"
     rounded="lg"
-    class="pa-2"
-    height="400"
+    class="pa-md-8 pa-sm-2"
     v-bind="props"
     :elevation="isHovering ? 12 : 2"
     href="#"
@@ -26,14 +25,16 @@ const props = defineProps({
       <v-row>
         <v-col cols="12" md="5">
           <div>
-            <div class="logo px-3" :style="{backgroundImage: 'url(' + projectIcon +')'}"></div>
+            <div class="pl-4 pb-2">
+              <div class="logo" :style="{backgroundImage: 'url(' + projectIcon +')'}"></div>
+              </div>
             <v-card-title class="text-h5">
               {{ projectTitle || 'Project Title'}}
             </v-card-title>
 
-            <v-card-subtitle class="text-subtitle-1">{{ projectDescription || 'project description'}}</v-card-subtitle>
+            <v-card-subtitle ><p class="text-subtitle-1">{{ projectDescription || 'project description'}}</p></v-card-subtitle>
 
-             <div class="px-3">
+             <div class="px-3 pt-5">
                 <v-chip class="ma-1" label v-for="(tag, i) in tags" :key="i">{{tag}}</v-chip>
             </div>
 

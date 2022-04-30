@@ -9,7 +9,7 @@
           src="src/assets/avatar.png"
           cover
         ></v-img> -->
-        <div class="myavatar"></div>
+        <div class="myavatar mx-auto"></div>
 
       </v-col>
 
@@ -49,9 +49,16 @@
 
 <style scoped>
 .myavatar{
-  width: 100%;
+  width: 350px;
   height: 350px;
   background-image: url("@/assets/avatar.png");
-  background-size: contain;
+  background-size: cover;
 }
+@media only screen and (max-width: 600px){
+  .myavatar{
+    width: 300px;
+    height: 300px;
+  }
+}
+
 </style>
